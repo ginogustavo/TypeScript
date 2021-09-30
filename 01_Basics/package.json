@@ -1,0 +1,15 @@
+{
+  "name": "01_basics",
+  "version": "1.0.0",
+  "description": "-Adds Types: which we have to be more explicit about how things work and avoi unexpected and unnecesary errors by using types -Next-gen JS features (compiled down for older browsers):  -Non-JS features like Interfaces or Generics -Meta-Programming Features like Decorators -Rich Configuration Options -Modern Tooling that helps even in non-TypeScript Projects",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1" 
+  }
+}
