@@ -12,8 +12,8 @@ e.g. let TS know we are sure we'll get an element with  ! symbol
 
 // ! - tells that the element will never yield null 
 // TypeCasting (as HTMLInputElement) - always be an input element
-const number1 = document.getElementById('num1')! as HTMLInputElement; 
-const number2 = document.getElementById('num2')! as HTMLInputElement;
+const num1 = document.getElementById('num1')! as HTMLInputElement; 
+const num2 = document.getElementById('num2')! as HTMLInputElement;
 
 // This is TS syntax (!, TypeCasting) bc we are in a .ts file
 // and compile this to JS (this won't work in Vanilla JS)
@@ -22,11 +22,11 @@ const button = document.querySelector('button')
 
 // Biggest advantage is the additional types, e.g. n1:number in parameters
 
-function add(n1:number, n2:number){
+function add0(n1:number, n2:number){
     return n1 + n2;
 }
 button.addEventListener('click', function(){
-    console.log(add(+number1.value, +number2.value));
+    console.log(add0(+num1.value, +num2.value));
 })
 // number1.value gets a String and the function expects a number
 // to fix this just assign the + sign.

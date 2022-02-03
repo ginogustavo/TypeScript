@@ -1,1 +1,21 @@
-console.log("Here goes the code!");
+function add(n1, n2, showResult, phrase) {
+    //console.log(typeof n1)
+    // if(typeof n1 !== 'number' || typeof n2 !=='number'){
+    //      throw new Error('Incorrect input!')
+    // }
+    var result = n1 + n2;
+    if (showResult) {
+        console.log(phrase + result);
+        //but again the previous bug: we concatenate a string with numbers-> everything become string.
+    }
+    else {
+        return result;
+    }
+}
+var number1 = 5;
+var number2 = 2.8;
+var printResult = true;
+var resultPhrase = 'Result is: ';
+// const result = add(number1, number2, printResult);
+// console.log(result)
+add(number1, number2, printResult, resultPhrase);
