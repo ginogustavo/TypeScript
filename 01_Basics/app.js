@@ -1,36 +1,12 @@
-//Literal types.
-var n1 = 5;
-var n2;
-var n3 = 5;
-var n4 = 2.8; // since the constant is alrady defined, the type is a specific number
-//Sample 2
-function combine2(input1, input2, resultConversion) {
-    var result;
-    if (typeof input1 === "number" && typeof input2 === "number") {
-        result = input1 + input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    //VALIDATION
-    if (resultConversion === "as-number") {
-        return +result; //parseFloat(result) also valid
-    }
-    else {
-        return result.toString();
-    }
+//TS infer the return type, but I can specify it:
+//  function add(n1: number, n2: number):number {
+function add(n1, n2) {
+    return n1 + n2;
 }
-console.log(combine2(30, 26, "as-number"));
-console.log(combine2("30", "26", "as-number"));
-console.log(combine2("Demo", "String", "as-text"));
-function combine3(input1, input2, resultConversion) {
-    var result;
-    if ((typeof input1 === "number" && typeof input2 === "number") ||
-        resultConversion === "as-number") {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
+// Note: As with variables, it's ideal to let TS do its job regarding the type inference.
+function printResult(num) {
+    console.log("Result " + num);
 }
+//function printResult(num: number):void  {  //-> type or return is void by default when not returning anything
+// printResult(add(5, 12));
+console.log(printResult(add(5, 12)));
