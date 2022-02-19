@@ -1,28 +1,18 @@
-function add(n1:number,n2:number, showResult:boolean, phrase:string){
-    //console.log(typeof n1)
-    // if(typeof n1 !== 'number' || typeof n2 !=='number'){
-    //      throw new Error('Incorrect input!')
-    // }
-
-    const result = n1+n2;
-    if(showResult){
-        //console.log(phrase + n1+n2);
-        //but again the previous bug: we concatenate a string with numbers-> everything become string.
-        
-        console.log(phrase + result);
-        
-    }else{
-        return result;
-    }
-    
+function add(n1: number, n2: number) {
+  return n1 + n2; //return type is inferred by TS
+  //The signature (see when you hover over the function) says it has "number" as return type.
 }
-const number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-const resultPhrase = 'Result is: ';
-// const result = add(number1, number2, printResult);
-// console.log(result)
 
+//we can explicitly assign a return type
+function add2(n1: number, n2: number): number {
+  return n1 + n2;
+}
 
-add(number1, number2, printResult, resultPhrase);
+/*Just as with variables, it's a good idea to let TS to do its job regarding type inference.
+and if you have no specific reason for explicitly setting the type, you should therefore 
+Not set the type, and instead let TS infer the type.
+*/
 
+function printResult(num: number) {
+  console.log(num);*
+}
