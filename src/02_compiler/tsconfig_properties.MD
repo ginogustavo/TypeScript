@@ -1,3 +1,7 @@
+https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+https://www.typescriptlang.org/docs/handbook/compiler-options.html
+
 # ts_core_libraries
 
 ## With option "lib": []
