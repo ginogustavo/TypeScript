@@ -1,11 +1,8 @@
 "use strict";
-// Type Alias / Custom Types
-//--------------------------
 function combine4(input1, input2, resultConversion) {
     let result;
     if ((typeof input1 === "number" && typeof input2 === "number") ||
-        resultConversion === "as-number" // not allowed if we compare another value.
-    ) {
+        resultConversion === "as-number") {
         result = +input1 + +input2;
     }
     else {
@@ -17,8 +14,6 @@ const user1 = {
     name: "Mark",
     age: 30,
 };
-// Avoid unnecessary repetition and manage types centrally.
-// Also, you can sinplify these:
 function greet(user) {
     console.log("Hi, I am " + user.name);
 }

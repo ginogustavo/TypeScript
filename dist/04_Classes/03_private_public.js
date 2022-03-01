@@ -1,5 +1,5 @@
 "use strict";
-class Department {
+class Department3 {
     constructor(n) {
         this.employees = [];
         this.name = n;
@@ -15,8 +15,8 @@ class Department {
         console.log(this.employees);
     }
 }
-const accounting = new Department("Accounting");
-accounting.addEmployee("Gino");
-accounting.addEmployee("Gustavo");
-accounting.describe();
-accounting.printEmployeeInfo();
+const accounting3 = new Department3("Accounting");
+accounting3.addEmployee("Gino");
+accounting3.addEmployee("Gustavo");
+accounting3.describe();
+accounting3.printEmployeeInfo();

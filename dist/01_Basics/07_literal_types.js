@@ -1,10 +1,8 @@
 "use strict";
-//Literal types.
 const n1 = 5;
 let n2;
 const n3 = 5;
-const n4 = 2.8; // since the constant is alrady defined, the type is a specific number
-//Sample 2
+const n4 = 2.8;
 function combine2(input1, input2, resultConversion) {
     let result;
     if (typeof input1 === "number" && typeof input2 === "number") {
@@ -13,9 +11,8 @@ function combine2(input1, input2, resultConversion) {
     else {
         result = input1.toString() + input2.toString();
     }
-    //VALIDATION
     if (resultConversion === "as-number") {
-        return +result; //parseFloat(result) also valid
+        return +result;
     }
     else {
         return result.toString();
@@ -24,12 +21,10 @@ function combine2(input1, input2, resultConversion) {
 console.log(combine2(30, 26, "as-number"));
 console.log(combine2("30", "26", "as-number"));
 console.log(combine2("Demo", "String", "as-text"));
-function combine3(input1, input2, resultConversion //Union Types combined with Literal types
-) {
+function combine3(input1, input2, resultConversion) {
     let result;
     if ((typeof input1 === "number" && typeof input2 === "number") ||
-        resultConversion === "as-number" // not allowed if we compare another value.
-    ) {
+        resultConversion === "as-number") {
         result = +input1 + +input2;
     }
     else {
@@ -38,4 +33,3 @@ function combine3(input1, input2, resultConversion //Union Types combined with L
     return result;
 }
 console.log(combine3("30", "26", "as-number"));
-// console.log(combine3("30", "26", "as-num"));// not allowed
