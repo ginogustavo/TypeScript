@@ -1,5 +1,5 @@
 "use strict";
-class Department {
+class Department8 {
     constructor(id, name) {
         this.id = id;
         this.name = name;
@@ -16,13 +16,7 @@ class Department {
         console.log(this.employees);
     }
 }
-class ITDepartment extends Department {
-    constructor(id, admins) {
-        super(id, "IT");
-        this.admins = admins;
-    }
-}
-class Accounting extends Department {
+class Accounting8 extends Department8 {
     constructor(id, reports) {
         super(id, "Accounting");
         this.reports = reports;
@@ -54,17 +48,11 @@ class Accounting extends Department {
         console.log(this.reports);
     }
 }
-const itdept = new ITDepartment("d1", ["Nataly", "Mark"]);
-itdept.addEmployee("Gino");
-itdept.addEmployee("Gustavo");
-itdept.describe();
-itdept.printEmployeeInfo();
-console.log(itdept);
-const actDept = new Accounting("d2", []);
-actDept.mostRecentReport = "Year end report";
-actDept.addReport("Something went wrong...");
-console.log(actDept.mostRecentReport);
-actDept.printReport();
-actDept.addEmployee("Gino");
-actDept.addEmployee("Alexander");
-actDept.printEmployeeInfo();
+const actDept8 = new Accounting8("d2", []);
+actDept8.mostRecentReport = "Year end report";
+actDept8.addReport("Something went wrong...");
+console.log(actDept8.mostRecentReport);
+actDept8.printReport();
+actDept8.addEmployee("Gino");
+actDept8.addEmployee("Alexander");
+actDept8.printEmployeeInfo();

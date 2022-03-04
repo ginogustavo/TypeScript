@@ -1,8 +1,8 @@
-class Department {
+class Department8 {
   protected employees: string[] = [];
   constructor(private readonly id: string, public name: string) {}
 
-  describe(this: Department) {
+  describe(this: Department8) {
     console.log(`Department: (${this.id}): ${this.name}`);
   }
   addEmployee(employee: string) {
@@ -13,16 +13,8 @@ class Department {
     console.log(this.employees);
   }
 }
-class ITDepartment extends Department {
-  admins: string[];
 
-  constructor(id: string, admins: string[]) {
-    super(id, "IT");
-    this.admins = admins;
-  }
-}
-
-class Accounting extends Department {
+class Accounting8 extends Department8 {
   private lastReport: string;
 
   //getter method
@@ -64,22 +56,15 @@ class Accounting extends Department {
   }
 }
 
-const itdept = new ITDepartment("d1", ["Nataly", "Mark"]);
-itdept.addEmployee("Gino");
-itdept.addEmployee("Gustavo");
-itdept.describe();
-itdept.printEmployeeInfo();
-console.log(itdept);
-
-const actDept = new Accounting("d2", []);
+const actDept8 = new Accounting8("d2", []);
 
 //Run setter
-actDept.mostRecentReport = "Year end report";
+actDept8.mostRecentReport = "Year end report";
 
-actDept.addReport("Something went wrong...");
+actDept8.addReport("Something went wrong...");
 //you access like a normal property.
-console.log(actDept.mostRecentReport);
-actDept.printReport();
-actDept.addEmployee("Gino");
-actDept.addEmployee("Alexander");
-actDept.printEmployeeInfo();
+console.log(actDept8.mostRecentReport);
+actDept8.printReport();
+actDept8.addEmployee("Gino");
+actDept8.addEmployee("Alexander");
+actDept8.printEmployeeInfo();
