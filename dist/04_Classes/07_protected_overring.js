@@ -1,5 +1,5 @@
 "use strict";
-class Department {
+class Department7 {
     constructor(id, name) {
         this.id = id;
         this.name = name;
@@ -16,13 +16,13 @@ class Department {
         console.log(this.employees);
     }
 }
-class ITDepartment extends Department {
+class ITDepartment7 extends Department7 {
     constructor(id, admins) {
         super(id, "IT");
         this.admins = admins;
     }
 }
-class Accounting extends Department {
+class Accounting7 extends Department7 {
     constructor(id, reports) {
         super(id, "Accounting");
         this.reports = reports;
@@ -40,15 +40,15 @@ class Accounting extends Department {
         console.log(this.reports);
     }
 }
-const itdept = new ITDepartment("d1", ["Nataly", "Mark"]);
-itdept.addEmployee("Gino");
-itdept.addEmployee("Gustavo");
-itdept.describe();
-itdept.printEmployeeInfo();
-console.log(itdept);
-const actDept = new Accounting("d2", []);
-actDept.addReport("Something went wrong...");
-actDept.printReport();
-actDept.addEmployee("Gino");
-actDept.addEmployee("Alexander");
-actDept.printEmployeeInfo();
+const itdept7 = new ITDepartment7("d1", ["Nataly", "Mark"]);
+itdept7.addEmployee("Gino");
+itdept7.addEmployee("Gustavo");
+itdept7.describe();
+itdept7.printEmployeeInfo();
+console.log(itdept7);
+const actDept7 = new Accounting7("d2", []);
+actDept7.addReport("Something went wrong...");
+actDept7.printReport();
+actDept7.addEmployee("Gino");
+actDept7.addEmployee("Alexander");
+actDept7.printEmployeeInfo();
