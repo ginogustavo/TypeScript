@@ -1,6 +1,18 @@
 class Department {
   protected employees: string[] = [];
-  constructor(private readonly id: string, public name: string) {}
+  constructor(private readonly id: string, public name: string) {
+    // When you set a static, you cannot access from your non-static functions.
+    // this.fiscalYear // inaccessible
+
+    //you need to use the name of the class
+    console.log(Department.fiscalYear);
+  }
+
+  static fiscalYear = 2023;
+
+  static createEmployee(name: string) {
+    return { name: name };
+  }
 
   describe(this: Department) {
     console.log(`Department: (${this.id}): ${this.name}`);
@@ -25,10 +37,7 @@ class ITDepartment extends Department {
 class Accounting extends Department {
   private lastReport: string;
 
-  //getter method
   get mostRecentReport() {
-    // we are encapsulating bc it's publicly accessible.
-    //you may want more complex logic here
     if (this.lastReport) {
       return this.lastReport;
     }
@@ -47,7 +56,6 @@ class Accounting extends Department {
     this.lastReport = reports[0];
   }
 
-  //we can override methods
   addEmployee(name: string) {
     if (name === "Gino") {
       return;
@@ -64,6 +72,9 @@ class Accounting extends Department {
   }
 }
 
+const employee1 = Department.createEmployee("Alex");
+console.log(employee1, Department.fiscalYear);
+
 const itdept = new ITDepartment("d1", ["Nataly", "Mark"]);
 itdept.addEmployee("Gino");
 itdept.addEmployee("Gustavo");
@@ -72,12 +83,8 @@ itdept.printEmployeeInfo();
 console.log(itdept);
 
 const actDept = new Accounting("d2", []);
-
-//Run setter
 actDept.mostRecentReport = "Year end report";
-
 actDept.addReport("Something went wrong...");
-//you access like a normal property.
 console.log(actDept.mostRecentReport);
 actDept.printReport();
 actDept.addEmployee("Gino");
