@@ -40,6 +40,6 @@ itdept6.addEmployee("Gustavo");
 itdept6.describe();
 itdept6.printEmployeeInfo();
 console.log(itdept6);
-const actDept6 = new Accounting("d2", []);
+const actDept6 = new Accounting6("d2", []);
 actDept6.addReport("Something went wrong...");
 actDept6.printReport();

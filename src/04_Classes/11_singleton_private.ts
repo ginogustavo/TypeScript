@@ -9,7 +9,7 @@
  * Make "private" the constructur of the class
  *
  */
-abstract class Department {
+abstract class Department11 {
   protected employees: string[] = [];
 
   constructor(protected readonly id: string, public name: string) {
@@ -19,7 +19,7 @@ abstract class Department {
   static createEmployee(name: string) {
     return { name: name };
   }
-  abstract describe(this: Department): void;
+  abstract describe(this: Department11): void;
   addEmployee(employee: string) {
     this.employees.push(employee);
   }
@@ -29,20 +29,7 @@ abstract class Department {
   }
 }
 
-class ITDepartment extends Department {
-  admins: string[];
-
-  constructor(id: string, admins: string[]) {
-    super(id, "IT");
-    this.admins = admins;
-  }
-
-  describe(): void {
-    console.log("IT Dept ID: " + this.id);
-  }
-}
-
-class AccountingDept extends Department {
+class AccountingDept11 extends Department11 {
   private lastReport: string;
 
   get mostRecentReport() {
@@ -68,14 +55,14 @@ class AccountingDept extends Department {
   //It's only accessible from inside the class.
   // How do we get instance? Using "static" methods.
 
-  private static instance: AccountingDept;
+  private static instance: AccountingDept11;
 
   static getInstance() {
     //could be either this.instance or AccountingDept.instance
-    if (AccountingDept.instance) {
+    if (AccountingDept11.instance) {
       return this.instance;
     }
-    this.instance = new AccountingDept("d2", []);
+    this.instance = new AccountingDept11("d2", []);
     return this.instance;
   }
 
@@ -98,28 +85,14 @@ class AccountingDept extends Department {
     console.log(this.reports);
   }
 }
-
-const employee1 = Department.createEmployee("Alex");
-console.log(employee1, Department.fiscalYear);
-
-const itdept = new ITDepartment("d1", ["Nataly", "Mark"]);
-itdept.addEmployee("Gino");
-itdept.addEmployee("Gustavo");
-itdept.describe();
-itdept.printEmployeeInfo();
-console.log(itdept);
-
 // const actDept = new Accounting("d2", []);
-const actDept = AccountingDept.getInstance();
-const actDept2 = AccountingDept.getInstance();
-console.log(actDept, actDept2);
+const actDept11 = AccountingDept.getInstance();
+const actDept112 = AccountingDept.getInstance();
+console.log(actDept11, actDept112);
 
 actDept.mostRecentReport = "Year end report";
 actDept.addReport("Something went wrong...");
 console.log(actDept.mostRecentReport);
-//actDept.printReport();
 actDept.addEmployee("Gino");
 actDept.addEmployee("Alexander");
-// actDept.printEmployeeInfo();
-
 actDept.describe();

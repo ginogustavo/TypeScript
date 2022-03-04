@@ -16,7 +16,7 @@ class Department4 {
         console.log(this.employees);
     }
 }
-const accounting4 = new Department("d1", "Accounting");
+const accounting4 = new Department4("d1", "Accounting");
 accounting4.addEmployee("Gino");
 accounting4.addEmployee("Gustavo");
 accounting4.describe();

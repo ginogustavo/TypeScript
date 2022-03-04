@@ -1,3 +1,7 @@
+/**static methods and properties
+Is commonly for Utility functions that you want to group or map to 
+a class logically or global constant which you always want to store in class. */
+
 class Department9 {
   constructor(private readonly id: string, public name: string) {
     // When you set a static, you cannot access from your non-static functions.

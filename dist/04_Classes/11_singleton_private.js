@@ -1,5 +1,5 @@
 "use strict";
-class Department {
+class Department11 {
     constructor(id, name) {
         this.id = id;
         this.name = name;
@@ -17,17 +17,8 @@ class Department {
         console.log(this.employees);
     }
 }
-Department.fiscalYear = 2023;
-class ITDepartment extends Department {
-    constructor(id, admins) {
-        super(id, "IT");
-        this.admins = admins;
-    }
-    describe() {
-        console.log("IT Dept ID: " + this.id);
-    }
-}
-class AccountingDept extends Department {
+Department11.fiscalYear = 2023;
+class AccountingDept11 extends Department11 {
     constructor(id, reports) {
         super(id, "Accounting");
         this.reports = reports;
@@ -46,10 +37,10 @@ class AccountingDept extends Department {
         this.addReport(value);
     }
     static getInstance() {
-        if (AccountingDept.instance) {
+        if (AccountingDept11.instance) {
             return this.instance;
         }
-        this.instance = new AccountingDept("d2", []);
+        this.instance = new AccountingDept11("d2", []);
         return this.instance;
     }
     describe() {
@@ -69,17 +60,9 @@ class AccountingDept extends Department {
         console.log(this.reports);
     }
 }
-const employee1 = Department.createEmployee("Alex");
-console.log(employee1, Department.fiscalYear);
-const itdept = new ITDepartment("d1", ["Nataly", "Mark"]);
-itdept.addEmployee("Gino");
-itdept.addEmployee("Gustavo");
-itdept.describe();
-itdept.printEmployeeInfo();
-console.log(itdept);
-const actDept = AccountingDept.getInstance();
-const actDept2 = AccountingDept.getInstance();
-console.log(actDept, actDept2);
+const actDept11 = AccountingDept.getInstance();
+const actDept112 = AccountingDept.getInstance();
+console.log(actDept11, actDept112);
 actDept.mostRecentReport = "Year end report";
 actDept.addReport("Something went wrong...");
 console.log(actDept.mostRecentReport);
