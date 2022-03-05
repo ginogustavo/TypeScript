@@ -1,5 +1,5 @@
 "use strict";
-class Person {
+class Person56 {
     constructor(n) {
         this.age = 30;
         if (n) {
@@ -15,8 +15,8 @@ class Person {
         }
     }
 }
-let user1, user02;
-user1 = new Person("Gino");
-user02 = new Person();
-user1.greet("Hi there.");
-user02.greet("Hi there.");
+let user56a, user56b;
+user56a = new Person("Gino");
+user56b = new Person();
+user56a.greet("Hi there.");
+user56b.greet("Hi there.");

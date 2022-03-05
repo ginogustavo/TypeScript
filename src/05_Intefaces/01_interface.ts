@@ -4,18 +4,18 @@
  * We can use it to Type-Check an object
  *
  */
-interface Person {
+interface Person51 {
   name: string;
   age: number;
   greet(phrase: string): void;
 }
 
-let user01: Person; // We can use our interfaces as type
+let user51: Person51; // We can use our interfaces as type
 
 //when assign, it has to be an object with type
 // Person (with name property, age number) and greet method
 
-user01 = {
+user51 = {
   name: "Luke",
   age: 25,
   greet(phrase: string) {
@@ -23,4 +23,4 @@ user01 = {
   },
 };
 
-user01.greet("Hi there.");
+user51.greet("Hi there.");
