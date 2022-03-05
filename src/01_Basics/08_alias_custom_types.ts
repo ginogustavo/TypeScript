@@ -30,7 +30,7 @@ type User = {
   name: string;
   age: number;
 };
-const user1: User = {
+const user2: User = {
   name: "Mark",
   age: 30,
 };

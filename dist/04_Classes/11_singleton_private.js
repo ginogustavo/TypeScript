@@ -4,7 +4,7 @@ class Department11 {
         this.id = id;
         this.name = name;
         this.employees = [];
-        console.log(Department.fiscalYear);
+        console.log(Department11.fiscalYear);
     }
     static createEmployee(name) {
         return { name: name };
@@ -60,12 +60,6 @@ class AccountingDept11 extends Department11 {
         console.log(this.reports);
     }
 }
-const actDept11 = AccountingDept.getInstance();
-const actDept112 = AccountingDept.getInstance();
+const actDept11 = AccountingDept11.getInstance();
+const actDept112 = AccountingDept11.getInstance();
 console.log(actDept11, actDept112);
-actDept.mostRecentReport = "Year end report";
-actDept.addReport("Something went wrong...");
-console.log(actDept.mostRecentReport);
-actDept.addEmployee("Gino");
-actDept.addEmployee("Alexander");
-actDept.describe();

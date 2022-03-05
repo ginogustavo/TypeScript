@@ -34,7 +34,7 @@ class Accounting6 extends Department6 {
         console.log(this.reports);
     }
 }
-const itdept6 = new ITDepartment("d1", ["Nataly", "Mark"]);
+const itdept6 = new ITDepartment6("d1", ["Nataly", "Mark"]);
 itdept6.addEmployee("Gino");
 itdept6.addEmployee("Gustavo");
 itdept6.describe();

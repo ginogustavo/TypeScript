@@ -13,7 +13,7 @@ abstract class Department11 {
   protected employees: string[] = [];
 
   constructor(protected readonly id: string, public name: string) {
-    console.log(Department.fiscalYear);
+    console.log(Department11.fiscalYear);
   }
   static fiscalYear = 2023;
   static createEmployee(name: string) {
@@ -86,13 +86,6 @@ class AccountingDept11 extends Department11 {
   }
 }
 // const actDept = new Accounting("d2", []);
-const actDept11 = AccountingDept.getInstance();
-const actDept112 = AccountingDept.getInstance();
-console.log(actDept11, actDept112);
-
-actDept.mostRecentReport = "Year end report";
-actDept.addReport("Something went wrong...");
-console.log(actDept.mostRecentReport);
-actDept.addEmployee("Gino");
-actDept.addEmployee("Alexander");
-actDept.describe();
+const actDept11 = AccountingDept11.getInstance();
+const actDept112 = AccountingDept11.getInstance();
+console.log(actDept11, actDept112); // are pointing the same objects.

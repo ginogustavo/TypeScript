@@ -12,7 +12,7 @@ abstract class Department10 {
   //abstract employees2: string[];
 
   constructor(protected readonly id: string, public name: string) {
-    console.log(Department.fiscalYear);
+    console.log(Department10.fiscalYear);
   }
   static fiscalYear = 2023;
   static createEmployee(name: string) {

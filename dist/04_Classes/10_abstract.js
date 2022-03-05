@@ -4,7 +4,7 @@ class Department10 {
         this.id = id;
         this.name = name;
         this.employees = [];
-        console.log(Department.fiscalYear);
+        console.log(Department10.fiscalYear);
     }
     static createEmployee(name) {
         return { name: name };

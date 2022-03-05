@@ -10,7 +10,7 @@ function combine4(input1, input2, resultConversion) {
     }
     return result;
 }
-const user1 = {
+const user2 = {
     name: "Mark",
     age: 30,
 };

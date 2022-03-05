@@ -1,10 +1,10 @@
 "use strict";
-let user1;
-user1 = {
+let user01;
+user01 = {
     name: "Luke",
     age: 25,
     greet(phrase) {
         console.log(`${phrase} ${this.name} `);
     },
 };
-user1.greet("Hi there.");
+user01.greet("Hi there.");
