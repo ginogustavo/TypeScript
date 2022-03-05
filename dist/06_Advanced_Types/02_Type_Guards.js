@@ -1,16 +1,16 @@
 "use strict";
-const emp1 = {
+const emp62 = {
     name: "Gino",
     privileges: ["create-server"],
     startDate: new Date(),
 };
-function adding(a, b) {
+function adding62(a, b) {
     if (typeof a === "string" || typeof b === "string") {
         return a.toString() + b.toString();
     }
     return a + b;
 }
-function printEmployeeInfo(emp) {
+function printEmployeeInfo62(emp) {
     console.log("Name " + emp.name);
     if ("privileges" in emp) {
         console.log("Privileges " + emp.privileges);
@@ -19,14 +19,14 @@ function printEmployeeInfo(emp) {
         console.log("Start Date " + emp.startDate);
     }
 }
-printEmployeeInfo(emp1);
-printEmployeeInfo({ name: "Alex", startDate: new Date() });
-class Car {
+printEmployeeInfo62(emp1);
+printEmployeeInfo62({ name: "Alex", startDate: new Date() });
+class Car62 {
     drive() {
         console.log("driving");
     }
 }
-class Truck {
+class Truck62 {
     drive() {
         console.log("Driving a truck...");
     }
@@ -34,27 +34,13 @@ class Truck {
         console.log("loading cargo... " + amount);
     }
 }
-const v1 = new Car();
-const v2 = new Truck();
-function userVehicule(vehicle) {
+const v62_1 = new Car();
+const v62_2 = new Truck();
+function userVehicule62(vehicle) {
     vehicle.drive();
-    if (vehicle instanceof Truck) {
+    if (vehicle instanceof Truck62) {
         vehicle.loadCargo(1000);
     }
 }
-userVehicule(v1);
-userVehicule(v2);
-function moveAnimal(animal) {
-    let speed;
-    switch (animal.type) {
-        case "Bird":
-            speed = animal.flyingSpeed;
-            break;
-        case "Horse":
-            speed = animal.runningSpeed;
-            break;
-        default:
-    }
-    console.log("moving at speed " + speed);
-}
-moveAnimal({ type: "Bird", flyingSpeed: 50 });
+userVehicule62(v62_1);
+userVehicule62(v62_2);
