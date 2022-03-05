@@ -8,8 +8,8 @@ function generateError(message: string, code: number) {
 generateError("An Error Ocurred!", 500);
 
 //Since we throw, there is no return and the excution stops here.
-const result = generateError("An Error 600 Ocurred!", 600);
-console.log(result); // print undefined.
+const result8 = generateError("An Error 600 Ocurred!", 600);
+console.log(result8); // print undefined.
 
 //the infered return type is "void".
 //"never" is newer type.

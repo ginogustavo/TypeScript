@@ -1,5 +1,5 @@
-const add = (a: number, b: number) => a + b;
-console.log(add(2, 3));
+const add13 = (a: number, b: number) => a + b;
+console.log(add13(2, 3));
 
 //default parameter value -> have to be last in the least.
 //this are not skipped when calling a function.

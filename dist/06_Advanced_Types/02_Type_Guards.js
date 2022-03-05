@@ -19,7 +19,7 @@ function printEmployeeInfo62(emp) {
         console.log("Start Date " + emp.startDate);
     }
 }
-printEmployeeInfo62(emp1);
+printEmployeeInfo62(emp62);
 printEmployeeInfo62({ name: "Alex", startDate: new Date() });
 class Car62 {
     drive() {
@@ -34,8 +34,8 @@ class Truck62 {
         console.log("loading cargo... " + amount);
     }
 }
-const v62_1 = new Car();
-const v62_2 = new Truck();
+const v62_1 = new Car62();
+const v62_2 = new Truck62();
 function userVehicule62(vehicle) {
     vehicle.drive();
     if (vehicle instanceof Truck62) {

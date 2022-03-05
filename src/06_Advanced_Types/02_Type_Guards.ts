@@ -48,7 +48,7 @@ function printEmployeeInfo62(emp: UnknowEmployee62) {
   }
 }
 
-printEmployeeInfo62(emp1);
+printEmployeeInfo62(emp62);
 printEmployeeInfo62({ name: "Alex", startDate: new Date() });
 
 /**
@@ -72,8 +72,8 @@ class Truck62 {
 
 type Vehicle62 = Car62 | Truck62;
 
-const v62_1 = new Car();
-const v62_2 = new Truck();
+const v62_1 = new Car62();
+const v62_2 = new Truck62();
 
 function userVehicule62(vehicle: Vehicle62) {
   vehicle.drive();

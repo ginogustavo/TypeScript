@@ -1,6 +1,6 @@
 "use strict";
-const add = (a, b) => a + b;
-console.log(add(2, 3));
+const add13 = (a, b) => a + b;
+console.log(add13(2, 3));
 const add10 = (a, b = 1) => a + b;
 console.log(add10(2, 3));
 console.log(add10(2));

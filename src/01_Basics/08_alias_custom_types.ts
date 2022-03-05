@@ -5,12 +5,12 @@
 // "type" is TS not JS
 type CombinableType = number;
 // typicall you want something more than a simple regular type.
-type Combinable = number | string;
+type Combinable0 = number | string;
 type ConversionDescriptor = "as-number" | "as-text";
 
 function combine4(
-  input1: Combinable,
-  input2: Combinable,
+  input1: Combinable0,
+  input2: Combinable0,
   resultConversion: ConversionDescriptor
 ) {
   let result;
