@@ -16,7 +16,7 @@ class Person56 {
     }
 }
 let user56a, user56b;
-user56a = new Person("Gino");
-user56b = new Person();
+user56a = new Person56("Gino");
+user56b = new Person56();
 user56a.greet("Hi there.");
 user56b.greet("Hi there.");

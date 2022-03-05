@@ -1,32 +1,22 @@
-interface Named {
-  readonly name?: string;
-  outputName?: string;
-}
+type Admin = {
+  name: string;
+  privileges: string[];
+};
 
-interface Greetable extends Named {
-  greet(phrase: string): void;
-}
+type Employee = {
+  name: string;
+  startDate: Date;
+};
 
-class Person implements Greetable {
-  name?: string;
-  age = 30;
-  constructor(n?: string) {
-    if (n) {
-      this.name = n;
-    }
-  }
-  greet(phrase: string): void {
-    if (this.name) {
-      console.log(`${phrase} ${this.name} `);
-    } else {
-      console.log("Hi!");
-    }
-  }
-}
+type ElevatedEmployee = Admin & Employee;
 
-let user1, user02: Greetable;
-user1 = new Person("Gino");
-user02 = new Person();
+const e1: ElevatedEmployee = {
+  name: "Gino",
+  privileges: ["create-server"],
+  startDate: new Date(),
+};
 
-user1.greet("Hi there.");
-user02.greet("Hi there.");
+type Combinableb = string | number;
+type Numeric = number | boolean;
+
+type Universal = Combinableb & Numeric;
