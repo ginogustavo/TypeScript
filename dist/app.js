@@ -1,6 +1,7 @@
 "use strict";
-function merge71(objA, objB) {
-    return Object.assign(objA, objB);
+function extractAndConvert0(obj, key) {
 }
-const mergedObj71 = merge71({ name: "Gino", hobbies: ["Sports"] }, { age: 30 });
-console.log(mergedObj71);
+function extractAndConvert(obj, key) {
+    return obj[key];
+}
+extractAndConvert({ name: "Gino" }, "name");
